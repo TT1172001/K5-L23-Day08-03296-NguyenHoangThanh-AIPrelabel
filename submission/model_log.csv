@@ -1,1 +1,10 @@
-run_id,part,model,params,split,n_boxes,sec_per_img,what_went_right,what_went_wrong,decision
+run_id,part,model,params,split,n_boxes,sec_per_img,what_went_right,what_went_wrong,decision,out,device,n_images,n_masks,dropped,note
+r03,,yoloe-s,--model yoloe --classes three_wheeler --split pilot --conf 0.25 --out work/prelabel/t_yoloe,pilot,8,0.5,,,,work\prelabel\t_yoloe,cpu,8,0,,
+r04,,yolo26-m,--model yolo26 --size m --split pilot --conf 0.25 --out work/prelabel/t_y26,pilot,215,0.81,,,,work\prelabel\t_y26,cpu,8,0,umbrellax10;handbagx2;traffic lightx2;backpackx2,
+r04,,yolo26-m,--model yolo26 --size m --split pilot --conf 0.5 --out work/prelabel/t_y26_c05,pilot,139,0.75,,,,work\prelabel\t_y26_c05,cpu,8,0,umbrellax5;handbagx2;traffic lightx1;backpackx1,
+r04,,yolo26-m+sam(sam2.1_b.pt),"--model yolo26 --size m --classes person,motorbike,car --images img_004.jpg img_013.jpg --conf 0.3 --segmenter sam --sam sam2.1_b.pt --out work/prelabel/y26_sam2",custom,16,8.45,,,,work\prelabel\y26_sam2,cpu,2,16,umbrellax3;handbagx1;bottlex8;chairx1,
+r05,,yoloe-s,--model yoloe --classes three_wheeler --split pilot --conf 0.25 --out work/prelabel/yoloe_pilot,pilot,8,0.39,,,,work\prelabel\yoloe_pilot,cpu,8,0,,
+r06,,yoloe-s,--model yoloe --prompts three-wheeled vehicle=three_wheeler --classes three_wheeler --split pilot --conf 0.25 --out work/prelabel/yoloe_pilot_v2,pilot,11,0.41,,,,work\prelabel\yoloe_pilot_v2,cpu,8,0,,
+r07,,yoloe-s,"--model yoloe --prompts tuk-tuk=three_wheeler,motorbike=motorbike,car=car --split pilot --conf 0.25 --out work/prelabel/yoloe_pilot_v3",pilot,35,0.4,,,,work\prelabel\yoloe_pilot_v3,cpu,8,0,,
+r08,,yolo26-m,--model yolo26 --size m --split all --conf 0.05 --out work/prelabel/y26_all --no-viz,all,1669,0.65,,,,work\prelabel\y26_all,cpu,36,0,chairx29;umbrellax57;handbagx28;traffic lightx10;bowlx4;bananax104;dining tablex10;benchx2;dogx2;bottlex26;cupx6;bookx1;stop signx2;backpackx16;potted plantx22;applex18;orangex16;cell phonex2,
+r09,,yoloe-s,--model yoloe --classes three_wheeler --split all --conf 0.05 --out work/prelabel/yoloe_all --no-viz,all,125,0.38,,,,work\prelabel\yoloe_all,cpu,36,0,,
