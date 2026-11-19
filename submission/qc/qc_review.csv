@@ -1,0 +1,9 @@
+image,object_id,error_type,reviewer,note
+img_003.jpg,,khong,Codex visual QC,Overlay reviewed; no additional clear object-level defect recorded.
+img_004.jpg,30,sai_lop,Codex visual QC,"Object #30 is a tuk-tuk/vehicle, but labeled person; review and correct in source task."
+img_008.jpg,105,sai_lop,Codex visual QC,"Object #105 is over a three-wheeler produce cart, not a car; review and correct class."
+img_013.jpg,126,sai_lop,Codex visual QC,"Object #126 car box appears to label the adjacent motorcycle; verify class against original image."
+img_017.jpg,,khong,Codex visual QC,Overlay reviewed; no additional clear object-level defect recorded.
+img_018.jpg,,khong,Codex visual QC,"Dense scene; reviewed overlay, no additional defect confidently assigned."
+img_021.jpg,,khong,Codex visual QC,"Dense scene; reviewed overlay, no additional defect confidently assigned."
+img_035.jpg,,khong,Codex visual QC,"Overlay reviewed; no additional clear object-level defect recorded."
